@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+//css added for the application
+import '../src/assets/css/animate.css';
+import '../src/assets/css/animation.css';
+import '../src/assets/css/bootstrap.css';
+import '../src/assets/css/font-awesome.css';
+import '../src/assets/css/linecons.css';
+import '../src/assets/css/responsive.css';
+import '../src/assets/css/style.css';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

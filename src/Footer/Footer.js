@@ -5,6 +5,13 @@ import React from 'react';
 
 class Footer extends React.Component{
 
+    constructor(props){
+        super(props);
+        this.state = {
+            link: '#'
+        }
+    }
+
     render(){
         return (
             <footer class="footer_section" id="contact">
@@ -16,17 +23,19 @@ class Footer extends React.Component{
                             <div class="col-lg-4">
                                 <div class="contact_block">
                                     <div class="contact_block_icon rollIn animated wow"><span><i class="fa-home"></i></span></div>
-                                    <span> 308 Negra Arroyo Lane, <br>Albuquerque, NM, 87104 </span> </div>
+                                    <span> 308 Negra Arroyo Lane, <br />Albuquerque, NM, 87104 </span> 
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="contact_block">
-                                        <div class="contact_block_icon icon2 rollIn animated wow"><span><i class="fa-phone"></i></span></div>
-                                        <span> 1-800-BOO-YAHH </span> </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="contact_block">
+                                    <div class="contact_block_icon icon2 rollIn animated wow"><span><i class="fa-phone"></i></span></div>
+                                    <span> 1-800-BOO-YAHH </span> 
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="contact_block">
-                                        <div class="contact_block_icon icon3 rollIn animated wow"><span><i class="fa-pencil"></i></span></div>
-                                        <span> <a href="mailto:hello@butterfly.com"> hello@butterfly.com</a> </span> </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="contact_block">
+                                    <div class="contact_block_icon icon3 rollIn animated wow"><span><i class="fa-pencil"></i></span></div>
+                                    <span> <a href="mailto:hello@butterfly.com"> hello@butterfly.com</a> </span> 
                                 </div>
                             </div>
                         </div>
@@ -79,7 +88,7 @@ class Footer extends React.Component{
                 <div class="footer_bottom">
                     <span>© Butterfly Theme</span>
                     <div class="credits">
-                        Designed by <a href="#">R.K. Baranwal</a>
+                        Designed by <a href={this.state.link}>R.K. Baranwal</a>
                     </div>
                 </div>
             </div>

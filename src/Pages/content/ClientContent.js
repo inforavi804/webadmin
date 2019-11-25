@@ -5,6 +5,13 @@ import React from 'react';
 
 class ClientContent extends React.Component{
 
+    constructor(props){
+        super(props);
+        this.state = {
+            link: '#'
+        }
+    }
+
     render(){
         return (
             <section className="main-section" id="client_outer">

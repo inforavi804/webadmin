@@ -7,7 +7,9 @@ class TopContent extends React.Component{
 
     constructor(props){
         super(props);
-        this.state.link = '#';
+        this.state = {
+            link: '#'
+        }
     }
 
     render(){

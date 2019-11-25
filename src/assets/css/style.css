@@ -1,3 +1,14 @@
+/*
+    Theme Name: Butterfly
+    Theme URL: https://bootstrapmade.com/butterfly-free-bootstrap-theme/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+*/
+
+/* CSS Document */
+
+/* Float Elements 
+---------------------------------*/
 .fl-lt {float:left;}
 .fl-rt {float:right;}
 
@@ -35,38 +46,38 @@ a, a:hover, a:active{ outline:0px !important}
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('assets/fonts/fontawesome-webfont.eot?v=4.1.0');
-  src: url('assets/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('assets/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('assets/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('assets/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'LatoRegular';
-    src: url('assets/fonts/lato-regular.eot');
-    src: url('assets/fonts/lato-regular.eot') format('embedded-opentype'),
-         url('assets/fonts/lato-regular.woff2') format('woff2'),
-         url('assets/fonts/lato-regular.woff') format('woff'),
-         url('assets/fonts/lato-regular.ttf') format('truetype'),
-         url('assets/fonts/lato-regular.svg#LatoRegular') format('svg');
+    src: url('../fonts/lato-regular.eot');
+    src: url('../fonts/lato-regular.eot') format('embedded-opentype'),
+         url('../fonts/lato-regular.woff2') format('woff2'),
+         url('../fonts/lato-regular.woff') format('woff'),
+         url('../fonts/lato-regular.ttf') format('truetype'),
+         url('../fonts/lato-regular.svg#LatoRegular') format('svg');
 }
 @font-face {
     font-family: 'LatoBoldBold';
-    src: url('assets/fonts/lato-bold.eot');
-    src: url('assets/fonts/lato-bold.eot') format('embedded-opentype'),
-         url('assets/fonts/lato-bold.woff2') format('woff2'),
-         url('assets/fonts/lato-bold.woff') format('woff'),
-         url('assets/fonts/lato-bold.ttf') format('truetype'),
-         url('assets/fonts/lato-bold.svg#LatoBoldBold') format('svg');
+    src: url('../fonts/lato-bold.eot');
+    src: url('../fonts/lato-bold.eot') format('embedded-opentype'),
+         url('../fonts/lato-bold.woff2') format('woff2'),
+         url('../fonts/lato-bold.woff') format('woff'),
+         url('../fonts/lato-bold.ttf') format('truetype'),
+         url('../fonts/lato-bold.svg#LatoBoldBold') format('svg');
 }
 @font-face {
     font-family: 'DosisBold';
-    src: url('assets/fonts/dosis-bold.eot');
-    src: url('assets/fonts/dosis-bold.eot') format('embedded-opentype'),
-         url('assets/fonts/dosis-bold.woff2') format('woff2'),
-         url('assets/fonts/dosis-bold.woff') format('woff'),
-         url('assets/fonts/dosis-bold.ttf') format('truetype'),
-         url('assets/fonts/dosis-bold.svg#DosisBold') format('svg');
+    src: url('../fonts/dosis-bold.eot');
+    src: url('../fonts/dosis-bold.eot') format('embedded-opentype'),
+         url('../fonts/dosis-bold.woff2') format('woff2'),
+         url('../fonts/dosis-bold.woff') format('woff'),
+         url('../fonts/dosis-bold.ttf') format('truetype'),
+         url('../fonts/dosis-bold.svg#DosisBold') format('svg');
 }
 
 /* Primary Styles
@@ -188,7 +199,7 @@ p{
 	}
 	
 .top_cont_inner{
-	 /* background:url(../img/white_pad.png) no-repeat right bottom; */
+	/* background:url(../img/white_pad.png) no-repeat right bottom; */
 	}
 	
 .top_content{
@@ -1087,8 +1098,8 @@ img {
 ---------------------------------*/
 
 .footer_section{ 
-  /* background:url(../img/pattern_bg.jpg) repeat left top; */
-} 
+	/* background:url(../img/pattern_bg.jpg) repeat left top; */
+}
 
 .footer_bottom{
 	border-top:1px solid #333333;
