@@ -1271,6 +1271,8 @@ img {
 		width: 25%;
 		padding: 0;
 		position:relative;
+		display: inline-block;
+		float: left;
 	}
 	
 	.portfolio-item {

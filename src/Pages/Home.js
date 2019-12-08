@@ -29,7 +29,7 @@ class Home extends React.Component{
                 <ClientContent/>
                 <LogoContent/>
                 <TeamContent/>
-                <TweetFeedContent/>
+                {/* <TweetFeedContent/> */}
             </div>
         );
     }

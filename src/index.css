@@ -3,6 +3,9 @@
 
 /* Clear Floated Elements
 ---------------------------------*/
+#contact{
+	background: #a9bdce;
+}
 .clear {
   clear: both;
   display: block;
