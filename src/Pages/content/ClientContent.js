@@ -1,5 +1,6 @@
 import React from 'react';
-
+import client1 from '../../assets/img/person-1.jpg';
+import client2 from '../../assets/img/person-2.jpg';
 
 
 
@@ -19,7 +20,7 @@ class ClientContent extends React.Component{
                 <div className="client_area ">
                     <div className="client_section animated  fadeInUp wow">
                         <div className="client_profile">
-                            <div className="client_profile_pic"><img src="img/client-pic1.jpg" alt="" /></div>
+                            <div className="client_profile_pic"><img src={client1} alt="" /></div>
                             <h3>Saul Goodman</h3>
                             <span>Lawless Inc</span> </div>
                         <div className="quote_section">
@@ -30,7 +31,7 @@ class ClientContent extends React.Component{
                     </div>
                     <div className="client_section animated  fadeInDown wow">
                         <div className="client_profile flt">
-                            <div className="client_profile_pic"><img src="img/client-pic2.jpg" alt="" /></div>
+                            <div className="client_profile_pic"><img src={client2} alt="" /></div>
                             <h3>Marie Schrader</h3>
                             <span>DEA Foundation</span> </div>
                         <div className="quote_section flt">

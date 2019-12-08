@@ -1,6 +1,6 @@
 import { ajax } from 'rxjs/ajax';
 import { fromFetch } from 'rxjs/fetch';
-import { map, switchMap, catchError } from 'rxjs/operators';
+import { map, switchMap, catchError, delay } from 'rxjs/operators';
 import { of } from 'rxjs';
 import GlobalConstant from '../config/config';
 
@@ -53,13 +53,49 @@ export class DataService{
         //return PortfolioData;
     }
 
+    /**
+     * Method to send data to the corresponding API
+     * @param {*} url 
+     * @param {*} reqBody 
+     * @param {*} optionalHeaders 
+     */
+    postDataToAPI(url, reqBody, optionalHeaders) {
+        this.resetOptionalHeaders();
+        this.setOptionalHeaders(optionalHeaders);
 
-
-
-
-    // fetchSubscription = Rx.Observable.from(fetch('http://swapi.co/api/people/1'))
-    //     .flatMap((res) => Rx.Observable.from(res.json()) )
-    //     .subscribe((fetchRes) => {
-    //         console.log('fetch sub', fetchRes);
-    //     });
+        return ajax({
+            url: GlobalConstant.API_URL + url,
+            method: 'POST',
+            headers: this.defaultHeaders,
+            body: reqBody
+        }).pipe(
+            delay(2000),
+            map(response => response),
+            catchError(error => {
+                console.log('+---------- Error: ', error);
+                return of(error);
+            })
+        );
+    }
+    
+    /**
+     * Method to set optional headers
+     */
+    setOptionalHeaders(optionalHeaders) {
+        if (typeof optionalHeaders === 'object'){
+            Object.assign(this.defaultHeaders, optionalHeaders);
+        }
+    }
+    
+    /**
+     * Resetting here optional headers
+     */
+    resetOptionalHeaders() {
+        var allKeys = Object.keys(this.defaultHeaders);
+        for (var key in allKeys) {
+            if (["Content-Type", "Cache-Control", "Pragma"].indexOf(allKeys[key]) === -1) {
+                delete this.defaultHeaders[allKeys[key]];
+            }
+        }
+    }
 }

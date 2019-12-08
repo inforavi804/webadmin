@@ -85,7 +85,7 @@ class Footer extends React.Component{
             </div>
             <div className="container">
                 <div className="footer_bottom">
-                    <span>© Butterfly Theme</span>
+                    <span>Copyright @ 2019</span>
                     <div className="credits">
                         Designed by <a href={this.state.link}>R.K. Baranwal</a>
                     </div>
