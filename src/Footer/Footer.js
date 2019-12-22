@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ContactForm from './ContactForm';
 
 
 class Footer extends React.Component{
@@ -7,8 +7,8 @@ class Footer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            link: '#'
-        }
+                link: '#',
+            };
     }
 
     render(){
@@ -54,32 +54,7 @@ class Footer extends React.Component{
                                 <li className="dribbble animated bounceIn wow delay-06s"><a href="javascript:void(0)"><i className="fa-dribbble"></i></a></li>
                             </ul>
                         </div>
-                        <div className="col-lg-6 wow fadeInUp delay-06s">
-                            <div className="form">
-                                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                                <div id="errormessage"></div>
-                                <form action="" method="post" role="form" className="contactForm">
-                                    <div className="form-group">
-                                        <input type="text" name="name" className="form-control input-text" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                        <div className="validation"></div>
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="email" className="form-control input-text" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                        <div className="validation"></div>
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="text" className="form-control input-text" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                        <div className="validation"></div>
-                                    </div>
-                                    <div className="form-group">
-                                        <textarea className="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                        <div className="validation"></div>
-                                    </div>
-    
-                                    <button type="submit" className="btn input-btn">SEND MESSAGE</button>
-                                </form>
-                            </div>
-                        </div>
+                        <ContactForm/>
                     </div>
                 </section>
             </div>

@@ -13,15 +13,15 @@ class PortfolioContent extends React.Component{
 
         this.dataService = new DataService();
 
-        var grid = document.querySelector('.isotope');
-        var iso = new Isotope( grid, {
-            // options...
-            itemSelector: '.isotope-item',
-            layoutMode: "fitRows",
-            masonry: {
-                columnWidth: 200
-            }
-        });
+        //var grid = document.querySelector('.isotope');
+        // var iso = new Isotope( grid, {
+        //     // options...
+        //     itemSelector: '.isotope-item',
+        //     layoutMode: "fitRows",
+        //     masonry: {
+        //         columnWidth: 200
+        //     }
+        // });
     }
 
     componentDidMount() {
