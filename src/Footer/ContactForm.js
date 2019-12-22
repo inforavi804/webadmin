@@ -53,7 +53,7 @@ class ContactForm extends React.Component{
 
         event.preventDefault();
         console.log(["Form submit click event worked =>", this.state]);
-        if(this.validateForm(event)) {
+        if(this.validateForm(this.state.errors)) {
             console.log('Validaton check passed');
             this.submitFormData(this.state);
         }else{
@@ -103,8 +103,14 @@ class ContactForm extends React.Component{
                     isValidationPass = false;
                 }
                 break;
+            default :
+                break;
         }
-        return isValidationPass;
+
+        this.setState({errors, [name]: value}, () => {
+            console.log(["", errors]);
+        });
+        //return isValidationPass;
     }
 
 
@@ -153,7 +159,7 @@ class ContactForm extends React.Component{
                                 <div className="validation">{this.state.errors.message}</div>
                             </div>
 
-                            <button type="submit" className="btn input-btn" validate={this.state.valid} onClick={this.handleSubmit}>SEND MESSAGE</button>
+                            <button type="submit" className="btn input-btn" validate={this.state.valid}  disabled={!this.state.valid} onClick={this.handleSubmit}>SEND MESSAGE</button>
                         </form>
                         <FormError errors={{'msg':"null"}}/>
                     </div>
