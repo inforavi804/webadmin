@@ -53,7 +53,7 @@ class ContactForm extends React.Component{
 
         event.preventDefault();
         console.log(["Form submit click event worked =>", this.state]);
-        if(this.validateForm(this.state.errors)) {
+        if(this.validateFormFields(this.state.errors)) {
             console.log('Validaton check passed');
             this.submitFormData(this.state);
         }else{
@@ -77,7 +77,7 @@ class ContactForm extends React.Component{
             case 'name' :
                 errors.name = (value.length < 5) ? 'Name must be of atleast 5 char' : '';
                 console.log('Name validation check executed');
-                if(errors.name!=''){
+                if(errors.name != ''){
                     isValidationPass = false;
                 }
                 break;
@@ -85,21 +85,21 @@ class ContactForm extends React.Component{
                 var emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
                 console.log('email validation check executed');
                 errors.email = (!emailValid) ? 'Please enter valid email id' : '';
-                if(errors.email!=''){
+                if(errors.email != ''){
                     isValidationPass = false;
                 }
                 break;
             case 'subject' :
                 errors.subject = (value.length < 5) ? 'Subject must be of atleast 5 char' : '';
                 console.log('subject validation check executed');
-                if(errors.subject!=''){
+                if(errors.subject != ''){
                     isValidationPass = false;
                 }
                 break;
             case 'message' :
                 errors.message = (value.length < 5) ? 'Message must be of atleast 5 char' : '';
                 console.log('subject validation check executed');
-                if(errors.message!=''){
+                if(errors.message != ''){
                     isValidationPass = false;
                 }
                 break;
@@ -111,6 +111,16 @@ class ContactForm extends React.Component{
             console.log(["", errors]);
         });
         //return isValidationPass;
+    }
+
+
+    //Checking valid fields before form submission
+    validateFormFields = (errors) => {
+        let valid = true;
+        Object.values(errors).forEach(
+          (val) => val.length > 0 && (valid = false)
+        );
+        return valid;
     }
 
 
