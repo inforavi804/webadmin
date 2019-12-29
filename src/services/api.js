@@ -12,6 +12,8 @@ export class DataService{
             'Cache-Control': 'no-cache',
             'Pragma': 'no-cache'
           };
+
+        
     }
 
     /**
@@ -48,7 +50,6 @@ export class DataService{
     }
 
     getApiResponseAsJsonExample(){
-
         console.log('+----------------- Portfolio JSON Data : ', GlobalConstant.API_URL + GlobalConstant.PORTFOLIO);
         //return PortfolioData;
     }

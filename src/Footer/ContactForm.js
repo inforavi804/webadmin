@@ -42,9 +42,11 @@ class ContactForm extends React.Component{
 
         if(validated) {
             console.log('Validaton check passed');
-            
+
+
         }else{
             console.log('Validaton check failed');
+
         }
     }
 
@@ -54,10 +56,11 @@ class ContactForm extends React.Component{
         event.preventDefault();
         console.log(["Form submit click event worked =>", this.state]);
         if(this.validateFormFields(this.state.errors)) {
-            console.log('Validaton check passed');
-            this.submitFormData(this.state);
+            console.log('Submit validaton check passed');
+            //this.submitFormData(this.state);
         }else{
-            console.log('Validaton check failed');
+            console.log('Submit validaton check failed');
+
         }
     }
 
@@ -116,9 +119,10 @@ class ContactForm extends React.Component{
 
     //Checking valid fields before form submission
     validateFormFields = (errors) => {
+        console.log("ValidationFormFelds =>", errors);
         let valid = true;
         Object.values(errors).forEach(
-          (val) => val.length > 0 && (valid = false)
+            (errorVal) => errorVal.length > 0 && (valid = false)
         );
         return valid;
     }
@@ -169,7 +173,7 @@ class ContactForm extends React.Component{
                                 <div className="validation">{this.state.errors.message}</div>
                             </div>
 
-                            <button type="submit" className="btn input-btn" validate={this.state.valid}  disabled={!this.state.valid} onClick={this.handleSubmit}>SEND MESSAGE</button>
+                            <button type="submit" className="btn input-btn" validate={this.state.valid} onClick={this.handleSubmit}>SEND MESSAGE</button>
                         </form>
                         <FormError errors={{'msg':"null"}}/>
                     </div>
